@@ -1,0 +1,242 @@
+body {font-family: Arial;}
+.input-text-custom, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+.text-table {  margin-top:10px;color:#888; }
+
+.neo-table,.neo-table-all{border-collapse:collapse;border-spacing:0;width:100%;display:table}.neo-table-all{border:1px solid #ccc}
+.neo-bordered tr,.neo-table-all tr{border-bottom:1px solid #ddd}.neo-striped tbody tr:nth-child(even){background-color:#f1f1f1}
+.neo-table-all tr:nth-child(odd){background-color:#fff}.neo-table-all tr:nth-child(even){background-color:#f1f1f1}
+.neo-hoverable tbody tr:hover,.neo-ul.neo-hoverable li:hover{background-color:#ccc}.neo-center-simpleed tr th,.neo-center-simpleed tr td{text-align:center}
+.neo-table td,.neo-table th,.neo-table-all td,.neo-table-all th{padding:8px 8px;display:table-cell;text-align:left;vertical-align:top}
+.neo-table th:first-child,.neo-table td:first-child,.neo-table-all th:first-child,.neo-table-all td:first-child{padding-left:16px}
+.neo-input{padding:8px;display:block;border:none;border-bottom:1px solid #ccc;width:100%}
+.neo-animate-input{transition:width 0.4s ease-in-out}.neo-animate-input:focus{width:100%!important}
+.anim-neo-btn {
+  position: relative;
+  color: rgb(89, 89, 89);
+  width: 256px;
+  height: 64px;
+  line-height: 64px;
+  transition: all 0.3s;
+  cursor:pointer;
+  span {
+    transition: all 0.3s;
+    tranform: scale(1, 1);
+  }
+  
+}
+.anim-neo-container {
+  text-align: center;
+  width: 100%;
+  height: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.anim-neo-btn::before, .btn::after {
+  content: '';
+  position: absolute;
+  transition: all 0.3s;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+
+/* BTN TWO */
+.anim-neo-btn-two::before, .anim-neo-btn-two::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+    height: 100%;
+  bottom: 0;
+    left: 0;
+    z-index: 1;
+  transition: all 0.3s;
+  border: 1px solid rgba(89, 89, 89, 0.5);
+}
+
+.anim-neo-btn-two:hover::after {
+  animation-name: rotatecw;
+  animation-duration: 2s;
+}
+.anim-neo-btn-two:hover::before {
+  animation-name: rotateccw; 
+  animation-duration: 3s;
+}
+.anim-neo-btn-two:hover::after, .anim-neo-btn-two:hover::before {
+  left: 96px;
+  width: 64px;
+  
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotatecw {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+@keyframes rotateccw {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(-360deg);}
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #96c9f2;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+/* Style the close button */
+.topright {
+    float: right;
+    cursor: pointer;
+    font-size: 28px;
+}
+
+.topright:hover {color: red;}
+
+.text-titre-option { font-size:20px; text-align:left; }
+
+.form-radio
+{
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+	 margin-top:-10px;
+     display: inline-block;
+     position: relative;
+     background-color: #f1f1f1;
+     color: #666;
+     top: 10px;
+     height: 30px;
+     width: 30px;
+     border: 0;
+     border-radius: 50px;
+     cursor: pointer;     
+     margin-right: 7px;
+     outline: none;
+}
+.form-radio:checked::before
+{
+     position: absolute;
+     font: 13px/1 'Open Sans', sans-serif;
+     left: 11px;
+     top: 7px;
+     content: '\02143';
+	 color:#2196F3;
+     transform: rotate(40deg);
+}
+.form-radio:hover
+{
+     background-color: #f7f7f7;
+	 border: 1px solid #96c9f2;
+}
+.form-radio:checked
+{
+     background-color: #f1f1f1;
+	 border: 1px solid #2196F3;
+}
+label
+{
+     font: 300 16px/1.7 'Open Sans', sans-serif;
+     color: #666;
+     cursor: pointer;
+} 

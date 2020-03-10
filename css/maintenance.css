@@ -1,0 +1,155 @@
+
+.flex-w,
+.flex-l,
+.flex-r,
+.flex-c,
+.flex-sa,
+.flex-sb,
+.flex-t,
+.flex-b,
+.flex-m,
+.flex-str,
+.flex-c-m,
+.flex-c-t,
+.flex-c-b,
+.flex-c-str,
+.flex-l-m,
+.flex-r-m,
+.flex-sa-m,
+.flex-sb-m,
+.flex-col-l,
+.flex-col-r,
+.flex-col-c,
+.flex-col-str,
+.flex-col-t,
+.flex-col-b,
+.flex-col-m,
+.flex-col-sb,
+.flex-col-sa,
+.flex-col-c-m,
+.flex-col-l-m,
+.flex-col-r-m,
+.flex-col-str-m,
+.flex-col-c-t,
+.flex-col-c-b,
+.flex-col-c-sb,
+.flex-col-c-sa,
+.flex-row,
+.flex-row-rev,
+.flex-col,
+.flex-col-rev,
+.dis-flex {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+.flex-w {
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+.flex-c-m {
+	justify-content: center;
+	-ms-align-items: center;
+	align-items: center;
+}
+.flex-col-c-m {
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: center;
+}
+
+.flex-col-l,
+.flex-col-r,
+.flex-col-c,
+.flex-col-str,
+.flex-col-t,
+.flex-col-b,
+.flex-col-m,
+.flex-col-sb,
+.flex-col-sa,
+.flex-col-c-m,
+.flex-col-l-m,
+.flex-col-r-m,
+.flex-col-str-m,
+.flex-col-c-t,
+.flex-col-c-b,
+.flex-col-c-sb,
+.flex-col-c-sa,
+.flex-col {
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+}
+.flex-w,
+.flex-l,
+.flex-r,
+.flex-c,
+.flex-sa,
+.flex-sb,
+.flex-t,
+.flex-b,
+.flex-m,
+.flex-str,
+.flex-c-m,
+.flex-c-t,
+.flex-c-b,
+.flex-c-str,
+.flex-l-m,
+.flex-r-m,
+.flex-sa-m,
+.flex-sb-m,
+.flex-col-l,
+.flex-col-r,
+.flex-col-c,
+.flex-col-str,
+.flex-col-t,
+.flex-col-b,
+.flex-col-m,
+.flex-col-sb,
+.flex-col-sa,
+.flex-col-c-m,
+.flex-col-l-m,
+.flex-col-r-m,
+.flex-col-str-m,
+.flex-col-c-t,
+.flex-col-c-b,
+.flex-col-c-sb,
+.flex-col-c-sa,
+.flex-row,
+.flex-row-rev,
+.flex-col,
+.flex-col-rev,
+.dis-flex {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+.size2 {
+  width: 155px;
+  height: 155px;
+}
+.bor1 {
+  border: 1px solid rgba(89,89,89,0.3);
+  border-radius: 50%;
+}
+.l2-txt1 {
+  font-family: Lato-Bold;
+  font-size: 40px;
+  line-height: 1;
+}
+.p-b-9 {padding-bottom: 9px;}
+.s2-txt1 {
+  font-family: Lato-Regular;
+  font-size: 12px;
+  line-height: 1;
+  text-transform: uppercase;
+}

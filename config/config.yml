@@ -1,0 +1,56 @@
+#Ce fichier contiens la config de base du serveur---
+Pied:
+    facebook: ""
+    twitter: https://twitter.com/NeoCraftPVP
+    youtube: ""
+    discord: https://discord.gg/qAFsS67
+    -facebook: 'true'
+    -twitter: 'true'
+    -youtube: 'true'
+    -discord: 'true'
+accueil:
+    -titre: 'true'
+mod:
+    -mod: 'true'
+    -URL_WIND: 'true'
+    URL_WIND: 'https://file.neocraft.fr/file/NeoCraft%20Launcher.exe'
+    -URL_MAC: 'true'
+    URL_MAC: 'https://file.neocraft.fr/file/NeoCraft%20Launcher.jar'
+    -URL_LINUX: 'true'
+    URL_LINUX: 'https://file.neocraft.fr/file/NeoCraft%20Launcher.jar'
+    -URL_MOD_PACK: ""
+    URL_MOD_PACK: ""
+    -URL_EMBED: 'true'
+    URL_EMBED: ""
+    -CONFIG_LAUNCHER: 'true'
+    -CONFIG_MIN_OS: 'true'
+    CONFIG_MIN_OS: Windows Xp, 7, 8.1, 10.
+    -CONFIG_MIN_CPU: 'true'
+    CONFIG_MIN_CPU: Intel Pentium Dual 3.00GHz 3.00GHz ou équivalent.
+    -CONFIG_MIN_RAM: 'true'
+    CONFIG_MIN_RAM: 3.5 Go.
+    -CONFIG_MIN_GPU: 'true'
+    CONFIG_MIN_GPU: Nvidia Geforce GT 710 ou équivalent.
+    -CONFIG_MIN_JAVA: 'true'
+    CONFIG_MIN_JAVA: Java 8 update 151.
+    -CONFIG_MIN_WIFI: 'true'
+    CONFIG_MIN_WIFI: 500 ko/s.
+    -CONFIG_MIN_CD: 'true'
+    CONFIG_MIN_CD: "500 Mo d'espace libre."
+    -CONFIG_RECO_OS: ""
+    CONFIG_RECO_OS: ""
+    -CONFIG_RECO_CPU: ""
+    CONFIG_RECO_CPU: ""
+    -CONFIG_RECO_RAM: ""
+    CONFIG_RECO_RAM: ""
+    -CONFIG_RECO_GPU: ""
+    CONFIG_RECO_GPU: ""
+    -CONFIG_RECO_JAVA: ""
+    CONFIG_RECO_JAVA: ""
+    -CONFIG_RECO_WIFI: ""
+    CONFIG_RECO_WIFI: ""
+    -CONFIG_RECO_CD: ""
+    CONFIG_RECO_CD: ""
+TITRE:
+    FONT: Luckiest+Guy
+    -FONT: Patua+One

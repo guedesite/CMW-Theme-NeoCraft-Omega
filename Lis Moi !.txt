@@ -1,0 +1,45 @@
+######################## NEOCRAFT OMEGA 2.0.1 BETA ########################
+
+Quelques information:
+
+Placez le dossier tu thème dans le dossier "theme" à la racine de votre FTP
+
+
+Thème NeoCraft Oméga développé par guedesite
+
+--------------------------------------------------------------------------------------------------------
+ N' oubliez pas de configurer les configs du thème dans la catégorie "theme" du panel d'administration !
+--------------------------------------------------------------------------------------------------------
+
+Ce thème est en perpétuel expention, si vous trouvez un beug, une erreur ou autre même si elle est mineur,
+vueilliez me la/le report: 
+
+mail: contact@neocraft.fr
+discord: guedesite#0799
+discord CraftMyWebSite: https://discord.gg/pYXDySg
+
+Je cherche aussi des bétas testeur de thème, des gens disponible pour utilisé le thème avant ca sortie en vue
+de trouver des beugs.
+
+A savoir:
+Les version ditent "primaire" par exemple l'adaptation à CraftMyWebSite 1.7 sont disponible sur le site CraftMyWebSite.fr
+mais les version ditent "secondaire", celle qui corrige les beugs des versions primaires, sont seulement disponible sur 
+mon site personnel ou je repertorie mes ressource htts://file.neocraft.fr , 
+
+Pourquoi ?
+CraftMyWebSite refusent le poste de lien adfly ( ce que je comprend ), mais j'ai des machines à payer et le git du thème est et restera privée pour des raisons de droits.
+
+Footer:
+Merci de laisser le lien cliquable CraftMyWebsite.fr ( cgu ) et de bien vouloir laisser aparètre "guedesite" ou de ne pas vous aproprier le thème sur le footer (pied.php), 
+
+c'est juste un respect que vous devez avoir, vous n'avez pas développé le cms, vous n'avez pas développé le thème, donc par pure respect
+
+soyez mature, et laisser ces mentions, merci.
+
+Merci de votre attention
+
+Cordialement Hugo Mathieu / Guedesite
+
+################################################################################################
+
+PS: Merci à tous ceus qui m'ont aidé pour les beugs, et aux fidèles du thème :D !
