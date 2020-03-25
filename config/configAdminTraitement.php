@@ -76,6 +76,10 @@ if($_Joueur_['rang'] == 1 OR $_PGrades_['PermsPanel']['theme']['actions']['editT
 	$ecritureTheme['TITRE']['FONT'] = htmlspecialchars($_POST['FONT']);
 	$ecritureTheme['TITRE']['-FONT'] = htmlspecialchars($_POST['-FONT']);
 
+	$ecritureTheme['ads']['-UseAds'] = htmlspecialchars($_POST['-UseAds']);
+	$ecritureTheme['ads']['AdsUser'] = htmlspecialchars($_POST['AdsUser']);
+	$ecritureTheme['ads']['AdsId'] = htmlspecialchars($_POST['AdsId']);
+	$ecritureTheme['ads']['-AdsId'] = htmlspecialchars($_POST['-AdsId']);
 	
 	$ecriture = new Ecrire('theme/'.$_Serveur_['General']['theme'].'/config/config.yml', $ecritureTheme);
 }

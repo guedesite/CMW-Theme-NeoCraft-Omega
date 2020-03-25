@@ -1,10 +1,10 @@
 <div class="neo-modal " id="PlayerModal" style="z-index:53;">
-	<div class="neo-modal-content neo-animate-zoom"  style="background-color: rgba(51, 51, 51, 0.5);color:#FFF;width:80%">
-		<div class="neo-container">
-			<span  onclick="document.getElementById('PlayerModal').style.display='none'" class="neo-button neo-display-topright">&times;</span>
+	<div class="neo-modal-content neo-animate-zoom"  style="background-color: rgba(15,15 , 15, 0.8);border-radius: 25px;padding:20px;color:#FFF;width:80%">
+		<div class="neo-container" style="background-color:rgba(40, 40, 40, 0.2);">
+			<span  onclick="document.getElementById('PlayerModal').style.display='none'" style="border-radius: 30px;margin-top:5px; margin-right:5px;" class="neo-button neo-display-topright">&times;</span>
 											
 				<div class="neo-panel ">
-					<h2 style="text-align:center;;">  Liste des joueurs connecté sur <?php echo $_Serveur_['General']['name']; ?> ! </h2>
+					<h2 style="text-align:center;" class="neo-text-header-small">  Liste des joueurs connecté sur <?php echo $_Serveur_['General']['name']; ?> ! </h2>
 						<div class="neo-container"  >
 						<p>
 						<ul class="neo-ul" style="width:100%;">
@@ -12,18 +12,16 @@
 						  <div class="neo-row-padding neo-responsive">
 						   <div id="neo-joueur-list" style="text-align:center;margin-top:25px;">
 								<?php for($j = 0; $j < count($jsonCon); $j++) { 
+								if(isset($serveurStats)) {
 								foreach ($serveurStats[$j]['joueurs'] as $cle => $element) { 
-									$spz[$o] = $serveurStats[$j]['joueurs'][$cle];
-									$o++;
-								} if(isset($spz[$o])) {
-									for($o == 0; $o--;) {		
 										echo ' <div  class="neo-quarter neo-container neo-card-4">';
-										echo '<img alt="" src="http://cravatar.eu/head/'.$spz[$o].'/128.png" >';
-										echo '<a href="?page=profil&profil='.$spz[$o].'"<h2>'.$spz[$o].'</h2></a>';
+										echo '<img alt="" src="https://cravatar.eu/head/'.$serveurStats[$j]['joueurs'][$cle].'/128.png" >';
+										echo '<a href="?page=profil&profil='.$serveurStats[$j]['joueurs'][$cle].'"<h2>'.$serveurStats[$j]['joueurs'][$cle].'</h2></a>';
 										echo '</div>';
-									}
-								}
-							}
+							
+								} 
+							
+								} }
 							?>
 						   </div> 
 						</div>
@@ -36,15 +34,40 @@
 			</div>
 		</div>
 </div>
-<!-- Le formulaire de condition -->
 
-<div class="neo-modal" id="Connection" style="z-index:53;">
-	<div class="neo-modal-content neo-animate-zoom"  style="background-color: rgba(51, 51, 51, 0.5);color:#FFF;">
-		<div class="neo-container">
-			<span  onclick="document.getElementById('Connection').style.display='none'" class="neo-button neo-display-topright">&times;</span>
+<div class="neo-modal" id="AddBlock" style="z-index:53;">
+	<div class="neo-modal-content neo-animate-zoom"  style="background-color: rgba(15,15 , 15, 0.8);border-radius: 25px;padding:20px;color:#FFF;">
+		<div class="neo-container"  style="background-color:rgba(40, 40, 40, 0.2);">
+			<span  onclick="document.getElementById('AddBlock').style.display='none'" style="border-radius: 30px;margin-top:5px; margin-right:5px;"class="neo-button neo-display-topright">&times;</span>
 											
 				<div class="neo-panel ">
-					<h2 style="text-align:center;;">  Se connecter </h2>
+					<h2 style="text-align:center;"class="neo-text-header-small"> Merci de votre attention. </h2>
+						<div class="neo-container"  >
+					  <div class="neo-center-simple" style="margin-top:25px;"> 
+							  <p>Votre bloqueur de publicité nous tue à petit feu. (Ad Block, UBlock etc.), NeoCraft est un projet réalisé 
+							  par des bénévoles passionnés et nous essayons de rendre la machine autosuffisante.</p>
+								<hr></hr>
+								<p>Depuis la première parution le 12 décembre 2015, nous voulons faire un serveur plaisant et passionnant.</p>
+								<hr></hr>
+								<p>Nous ne cherchons pas à vous envahir de publicité mais à tirer quelques euros de plus à la fin du mois pour réduire les frais, jusqu'à présent nous gagnons 50 à 100 euros sur 1 an alors que nous payons 200 euros en hébergement par an.
+
+								</p><p>Sans vous, chers membres de la communauté NeoCraft, nous n'en serions jamais là.
+
+								Merci à vous, Guedesite/Hugo MATHIEU, Fondateur de NeoCraft.</p>
+							</div> 			
+
+					</div>
+				</div>
+			</div>
+		</div>
+</div>
+<div class="neo-modal" id="Connection" style="z-index:53;">
+	<div class="neo-modal-content neo-animate-zoom"  style="background-color: rgba(15,15 , 15, 0.8);border-radius: 25px;padding:20px;color:#FFF;">
+		<div class="neo-container"  style="background-color:rgba(40, 40, 40, 0.2);">
+			<span  onclick="document.getElementById('Connection').style.display='none'" style="border-radius: 30px;margin-top:5px; margin-right:5px;"class="neo-button neo-display-topright">&times;</span>
+											
+				<div class="neo-panel ">
+					<h2 style="text-align:center;"class="neo-text-header-small">  Se connecter </h2>
 						<div class="neo-container"  >
 						<p>
 						<ul class="neo-ul" style="width:100%;">
@@ -79,12 +102,12 @@
 </div>
 
 <div class="neo-modal" id="enreg" style="z-index:53;">
-	<div class="neo-modal-content neo-animate-zoom"  style="background-color: rgba(51, 51, 51, 0.5);color:#FFF;">
-		<div class="neo-container">
-			<span  onclick="document.getElementById('enreg').style.display='none'" class="neo-button neo-display-topright">&times;</span>
+	<div class="neo-modal-content neo-animate-zoom"  style="background-color: rgba(15,15 , 15, 0.8);border-radius: 25px;padding:20px;color:#FFF;">
+		<div class="neo-container"  style="background-color:rgba(40, 40, 40, 0.2);">
+			<span  onclick="document.getElementById('enreg').style.display='none'"style="border-radius: 30px;margin-top:5px; margin-right:5px;" class="neo-button neo-display-topright">&times;</span>
 											
 				<div class="neo-panel ">
-					<h2 style="text-align:center;;">  S'enregistrer </h2>
+					<h2 style="text-align:center;" class="neo-text-header-small">  S'enregistrer </h2>
 						<div class="neo-container"  >
 						<p>
 						<ul class="neo-ul" style="width:100%;">
@@ -135,12 +158,12 @@
 		</div>
 </div>
 <div class="neo-modal " id="passrecover" style="z-index:53;">
-	<div class="neo-modal-content neo-animate-zoom"  style="background-color: rgba(51, 51, 51, 0.5);color:#FFF;width:40%">
-		<div class="neo-container">
-			<span  onclick="document.getElementById('passrecover').style.display='none'" class="neo-button neo-display-topright">&times;</span>
+	<div class="neo-modal-content neo-animate-zoom"  style="background-color: rgba(15,15 , 15, 0.8);border-radius: 25px;padding:20px;color:#FFF;width:40%">
+		<div class="neo-container"  style="background-color:rgba(40, 40, 40, 0.2);">
+			<span  onclick="document.getElementById('passrecover').style.display='none'" style="border-radius: 30px;margin-top:5px; margin-right:5px;"class="neo-button neo-display-topright">&times;</span>
 											
 				<div class="neo-panel ">
-					<h2 style="text-align:center;;">  Mot de passe oublié ? </h2>
+					<h2 style="text-align:center;" class="neo-text-header-small">  Mot de passe oublié ? </h2>
 						<div class="neo-container"  >
 						<form class="-signin" role="form" method="post" action="?&action=passRecover">
 						<p>
@@ -162,12 +185,12 @@
 <?php if($_Theme_['mod']['-mod'] == 'true') { ?>
 
 <div class="neo-modal " id="mod" style="z-index:53;">
-	<div class="neo-modal-content neo-animate-zoom"  style="background-color: rgba(51, 51, 51, 0.5);color:#FFF;width:80%">
-		<div class="neo-container">
-			<span  onclick="document.getElementById('mod').style.display='none'" class="neo-button neo-display-topright">&times;</span>
+	<div class="neo-modal-content neo-animate-zoom"  style="background-color: rgba(15,15 , 15, 0.8);border-radius: 25px;padding:20px;color:#FFF;width:80%">
+		<div class="neo-container"  style="background-color:rgba(40, 40, 40, 0.2);">
+			<span  onclick="document.getElementById('mod').style.display='none'"style="border-radius: 30px;margin-top:5px; margin-right:5px;" class="neo-button neo-display-topright">&times;</span>
 											
 				<div class="neo-panel ">
-					<h2 class="neo-center-simple">  Rejoindre la communauté ! </h2>
+					<h2 class="neo-center-simple neo-text-header-small">  Rejoindre la communauté ! </h2>
 						<div class="neo-container"  >
 						<form class="-signin" role="form" method="post" action="?&action=passRecover">
 						<p>

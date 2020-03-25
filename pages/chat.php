@@ -10,7 +10,7 @@
 
 <div class="neo-background-cale" style="margin-top:75px;">
 	<div class="neo-center">
-		<?php if(count($jsonCon) >= 1) {
+		<?php if(count($jsonCon) >0) {
 				$Chat = new Chat($jsonCon);?>
 				<div class="neo-xbackground neo-radius">
 					<div class="neo-row-padding" style="padding:10px;">
@@ -29,7 +29,7 @@
 					$messages = $Chat->getMessages($i);
 				?>
 					<div id="categorie-<?php echo $i; ?>" class="tab-pane fade <?php if($i==0) echo 'in active show'; ?>" aria-expanded="false">
-						<div class="panel-body" style="background-color: #CCCCCC;">
+						<div class="panel-body">
 							<?php 
 							if($messages != false)
 							{
@@ -39,7 +39,7 @@
 									$Img = new ImgProfil($value['player'], 'pseudo');
 
 									?>
-										<p class="username"><img class="rounded" src="<?=$Img->getImgToSize(32, $width, $height);?>" style="width: <?=$width;?>px; height: <?=$height;?>px;" alt="avatar de l'auteur" title="<?php echo $value['player']; ?>" /> <?=($value['player'] == '') ? 'Console': $value['player'].', '.$_Forum_->gradeJoueur($value['player']);?> à <span class="font-weight-light"><?=date('H:i:s', $value['time']);?></span> -> <?=$Chat->formattage(htmlspecialchars($value['message']));?></p>
+										<p class="neo-xbackground neo-radius" style="padding:5px;margin-bottom:10px;" ><img class="rounded" src="<?=$Img->getImgToSize(32, $width, $height);?>" style="width: <?=$width;?>px; height: <?=$height;?>px;" alt="avatar de l'auteur" title="<?php echo $value['player']; ?>" /> <?=($value['player'] == '') ? 'Console': $value['player'].', '.$_Forum_->gradeJoueur($value['player']);?> à <span class="font-weight-light"><?=date('H:i:s', $value['time']);?></span> -> <?=$Chat->formattage(htmlspecialchars($value['message']));?></p>
 									<?php
 								}
 							}

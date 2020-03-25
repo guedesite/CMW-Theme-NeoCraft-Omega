@@ -7,6 +7,7 @@
 	  <button class="tablinks" onclick="openCity(event, 'Général')" id="defaultOpen">Général</button>
 	  <button class="tablinks" onclick="openCity(event, 'Moddé')">Moddé</button>
 	  <button class="tablinks" onclick="openCity(event, 'titre')">Entete</button>
+	  <button class="tablinks" onclick="openCity(event, 'ads')">Google AdSense</button>
 	  <button class="tablinks" onclick="openCity(event, 'Contact')">Contact</button>
 	</div>
 	
@@ -505,7 +506,51 @@
 			</div>
 
 	</div>
-	
+	<div id="ads" class="tabcontent">
+	  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+	  <h3>Google AdSense</h3>
+		
+		
+			<hr>
+			<iframe width="100%" height="300" src="https://www.youtube.com/embed/ekD_C9ugj9M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<hr>
+			<table class="neo-table">
+			
+			<tr> 
+			  <td style="width:10%;">
+				<label class="switch">
+				  <input type="checkbox" name="-UseAds" value="true" <?php echo GetCheck($_Theme_['ads']['-UseAds']); ?>>
+				  <span class="slider round"></span>
+				</label>
+			  </td>
+			  <td style="width:90%;">
+				<input class="neo-input neo-animate-input" placeholder="Id de l'utilisateur fournie par google adsense ( voir tutoriel )" name="AdsUser" value="<?php echo $_Theme_['ads']['AdsUser']; ?>" type="text" style="width:30%;">
+			  </td>
+			</tr>
+			
+			<tr> 
+			  <td style="width:10%;">
+				<label class="switch">
+				  <input type="checkbox" name="-AdsId" value="true" <?php echo GetCheck($_Theme_['ads']['-AdsId']); ?>>
+				  <span class="slider round"></span>
+				</label>
+			  </td>
+			  <td style="width:90%;">
+				<input class="neo-input neo-animate-input" placeholder="Id de l'annonce fournie par google adsense ( voir tutoriel )" name="AdsId" value="<?php echo $_Theme_['ads']['AdsId']; ?>" type="text" style="width:30%;">
+			  </td>
+			</tr>
+		
+			
+		  </table>
+
+
+		
+		<div class="anim-neo-container">
+			 <div class="anim-neo-btn anim-neo-btn-two" OnClick="document.getElementById('valide-form').click();">
+			  <span>Envoyer</span>
+			</div>
+		</div>
+	</div>
 	<input type="submit" style="position:absolute;z-index:-999;opacity:0;" id="valide-form">
 	</form>
 

@@ -65,10 +65,12 @@ $versionT = file_get_contents('theme/'.$_Serveur_['General']['theme'].'/version.
 </div>
 <?php } ?>
 <body id="content" class="neo-background-image" style="width:100%;">
-
+	<div id="particle-canvas" style="position:absolute;width:100%;height:100%;z-index:-1;" ></div>
+	<div style="position:absolute;width:100%;height:100%;z-index:1;">
 	<?php if(isset($_Joueur_)) { setcookie('pseudo', $_Joueur_['pseudo'], time() + 86400, null, null, false, true);  }
 	include('theme/' .$_Serveur_['General']['theme']. '/entete.php');
 	tempMess();
+	
 	$check_installation_dossier = "installation";
 	if (is_dir($check_installation_dossier)) { ?>
 		<header class="heading-pagination">
@@ -87,7 +89,9 @@ $versionT = file_get_contents('theme/'.$_Serveur_['General']['theme'].'/version.
 				<br>
 			<br>
 		</div></section>
-<?php } else { include('controleur/page.php'); } 
+		
+	
+<?php } else { echo '<div id="content-under">'; include('controleur/page.php'); echo '</div>';} 
 include('theme/' .$_Serveur_['General']['theme']. '/pied.php'); ?>
 <?php include('theme/' .$_Serveur_['General']['theme']. '/formulaires.php'); 
 if($versionS > $versionT AND $_Joueur_['rang'] == 1) { ?>
@@ -506,6 +510,6 @@ if(isset($_GET['send']))
 		});
 		</script><?php
 }
-?>
+?></div>
 </body>
 </html>

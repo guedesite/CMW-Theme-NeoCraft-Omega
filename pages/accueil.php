@@ -192,12 +192,12 @@
 											} ?>
 											
 											<div class="neo-modal " id="<?php echo "news".$news[$i]['id']; ?>" style="z-index:53;">
-													<div class="neo-modal-content"  style="background-color: rgba(51, 51, 51, 0.5);color:#FFF;width:80%">
-														<div class="neo-container">
-															<span  onclick="document.getElementById('<?php echo "news".$news[$i]['id']; ?>').style.display='none'" class="neo-button neo-display-topright">&times;</span>
-																							
+												<div class="neo-modal-content neo-animate-zoom"  style="background-color: rgba(15,15 , 15, 0.8);border-radius: 25px;padding:20px;color:#FFF;">
+													<div class="neo-container" style="background-color:rgba(40, 40, 40, 0.2);">
+															<span  onclick="document.getElementById('<?php echo "news".$news[$i]['id']; ?>').style.display='none'" class="neo-button neo-display-topright" style="border-radius: 30px;margin-top:5px; margin-right:5px;"class="neo-button neo-display-topright">&times;</span>
+																								
 																<div class="neo-panel ">
-																	<h2 style="text-align:center;;">  <?php echo $news[$i]['titre']; ?></h2>
+																	<h2 style="text-align:center;;" class="neo-text-header-small">  <?php echo $news[$i]['titre']; ?></h2>
 																	
 																		<div class="neo-container"  >
 																		<p>
@@ -228,7 +228,7 @@
 																						
 
 																							<div class="neo-dropdown-hover">
-																								<button class="neo-button neo-grey">Action <b class="caret"></b></button>
+																								<button class="neo-button neo-red">Action <b class="caret"></b></button>
 																								<div class="neo-dropdown-content neo-bar-block neo-border">
 																									<?php if($newsComments['pseudo'] == $_Joueur_['pseudo'] OR $_Joueur_['rang'] == 1) {
 																										echo '<a href="javascript:void(0)" class="neo-bar-item neo-button"  onclick="document.getElementById(\'news'.$news[$i]['id'].'\').style.display=\'none\'; document.getElementById(\'news'.$news[$i]['id'].'-'.$newsComments['id'].'-edit\').style.display=\'block\'"  >Editer</a>';
@@ -275,7 +275,7 @@
 																				</form>
 																	<?php } else { ?>
 																			<center><div class="alert alert-danger">Veuillez-vous connecter pour mettre un commentaire.</div></center>
-																			<center><a onclick="document.getElementById('Connection').style.display='block'" class="neo-button neo-grey">Connexion</a></center>
+																			<center><a onclick="document.getElementById('Connection').style.display='block'" class="neo-button neo-green neo-hover-green hvr-bounce-in">Connexion</a></center>
 																		<?php } ?>
 																	  </footer>
 																</div>

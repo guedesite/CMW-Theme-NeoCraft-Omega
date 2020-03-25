@@ -11,7 +11,7 @@ Pied:
 accueil:
     -titre: 'true'
 mod:
-    -mod: 'true'
+    -mod: ""
     -URL_WIND: 'true'
     URL_WIND: 'https://file.neocraft.fr/file/NeoCraft%20Launcher.exe'
     -URL_MAC: 'true'
@@ -54,3 +54,8 @@ mod:
 TITRE:
     FONT: Luckiest+Guy
     -FONT: Patua+One
+ads:
+    -UseAds: ""
+    AdsUser: ""
+    AdsId: ""
+    -AdsId: ""
