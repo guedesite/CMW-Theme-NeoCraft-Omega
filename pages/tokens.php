@@ -22,7 +22,7 @@
 {
 ?>
 			
-<div class="neo-background-cale" style="margin-top:75px;">
+<div class="neo-background-cale">
 	
 		<?php if(isset($_GET['success']) AND $_GET['success'] == 'true'){ ?>
 		<div class="alert alert-dismissable alert-success neo-radius neo-center-small">
@@ -103,7 +103,7 @@
 	if($_Serveur_['Payement']['dedipass'] == true)
 	{
 		?>
-		<div class="neo-background-cale" style="margin-top:75px;">
+		<div class="neo-background-cale">
 			<div class="neo-xbackground neo-radius neo-center">
 			<h3 class="neo-text"> Paiement par Dedipass <i class="far fa-money-bill-alt"></i></h3>
 			</div>

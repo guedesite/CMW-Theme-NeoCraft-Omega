@@ -9,7 +9,7 @@
 	</div>
 
 </div>
-<div class="neo-background-cale" style="margin-top:75px;">	
+<div class="neo-background-cale" >	
 	<div class="container neo-xbackground neo-radius" style="padding:15px;margin-bottom:10px;">	
 		<div class="categories-edit">
 			<ul class="nav nav-tabs" id="modifProfil">

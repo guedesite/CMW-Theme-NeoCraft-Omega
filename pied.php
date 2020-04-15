@@ -1,4 +1,4 @@
-﻿<footer>
+﻿<footer style="margin-top:0px">
 	<div class="neo-bar neo-container neo-xbackground neo-row" >
 		<div class="neo-col neo-center-simple neo-margin-left-1" style="<?php if($_Theme_['ads']['-AdsId'] == 'true') { echo 'width:33%;'; } else { echo 'width:49%;'; } ?>">
 			<div class="neo-border-bottom neo-border-gray neo-center-simple" style="font-size:25px;">

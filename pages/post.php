@@ -24,7 +24,7 @@ if(isset($_GET['id']))
 			</div>
 		</div>
 	</div>
-	<div class="neo-background-cale" style="margin-top:75px;">
+	<div class="neo-background-cale">
 	<div class="neo-center neo-xbackground neo-radius" style="padding:15px;">
 	<nav class="nav nav-pills nav-justified">
 		<?php if(isset($_Joueur_) && $_JoueurForum_->is_followed($id))
@@ -504,7 +504,6 @@ if(isset($_GET['id']))
 	 	echo '<div class="alert alert-warning text-center">Connectez-vous pour pouvoir interragir ! </div>';
 	 ?>
 	 	</div>
-	 </div>
 
 <?php
 		}

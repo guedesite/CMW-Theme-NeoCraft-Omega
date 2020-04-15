@@ -4,7 +4,7 @@
     .error-actions {margin-top:15px;margin-bottom:15px;}
     .error-actions .btn { margin-right:10px; }
     </style>
-    <div class="container">
+    <div class="neo-background-cale text-center" >
     <div class="neo-xbackground neo-radius" style="padding:15px;margin:5%;">
         <div class="row">
             <div class="col-md-12">
@@ -35,7 +35,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="neo-background-cale" style="margin-top:75px;">
+			<div class="neo-background-cale" >
 				<div class="neo-center">
 					<div class="container neo-xbackground neo-radius" style="padding:10px;">
 					<?php for($j = 0; $j < count($pages['tableauPages']); $j++) { ?>

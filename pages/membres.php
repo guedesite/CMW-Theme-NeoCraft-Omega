@@ -31,7 +31,7 @@ else
 	</div>
 </div>
 
-<div class="neo-background-cale" style="margin-top:75px;">
+<div class="neo-background-cale" >
 	<div class="neo-center">
 		<div class="neo-xbackground neo-radius" style="padding:10px;">
 			 <table id="neo-s-index" class="neo-table neo-hoverable neo-striped neo-bordered">

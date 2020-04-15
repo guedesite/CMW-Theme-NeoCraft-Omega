@@ -26,7 +26,7 @@
 	</div>
 </div>
 
-<div class="neo-background-cale" style="margin-top:75px;">
+<div class="neo-background-cale" >
 <div class="neo-center">
 		<div class="tabbable">
 		<div class="neo-xbackground neo-radius" style="padding:10px;">

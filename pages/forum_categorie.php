@@ -23,7 +23,7 @@
 				</div>
 			</div>
 		</div>
-	<div class="neo-background-cale" style="margin-top:75px;">
+	<div class="neo-background-cale" >
 			<?php if($_SESSION['mode'])
 			{
 				?>

@@ -20,7 +20,7 @@
 		</div>
 	</div>
 </div>
-<div class="neo-background-cale" style="margin-top:75px;">
+<div class="neo-background-cale" >
 	<div class="neo-center">
 
 <?php 
@@ -219,4 +219,3 @@ if(isset($_Joueur_) AND ($_Joueur_['rang'] == 1 OR $_PGrades_['PermsForum']['gen
 ?>
 		</div>
 	</div>
-</div>

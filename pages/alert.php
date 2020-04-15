@@ -15,17 +15,8 @@
 	</div>
 </div>
 
-<div class="neo-background-cale text-center" >
-	<div class="neo-center">
-		<div style="width:auto;" class="neo-xbackground neo-xtransforme-2  ">
-			<div class="neo-xbackground neo-xtransforme-1 " style="padding:1px;">
-				<p class="neo-text-header-small  neo-xtransforme-2" style="margin-top:10px;text-transform: uppercase;"><b><i class="fa fa-shopping-cart"></i> Vos alertes</b></p>
-			</div>
-		</div>
-	</div>
-</div>
 
-<div style="margin-top:75px;" class="neo-background-cale neo-center-simple" >
+<div class="neo-background-cale neo-center-simple" >
 	<div class="neo-center neo-xbackground neo-container neo-responsive neo-radius neo-padding-16">
 		<h2 class="header-bloc">Gestion des signalements</h2>
 			<div class="corp-bloc">

@@ -15,42 +15,66 @@
 			</strong></center></p>
 		</div>
 	</div>
-</div><div style="margin-top:75px;" class="neo-background-cale neo-center-simple" >
+</div><div class="neo-background-cale neo-center-simple" >
 	<div class="neo-center">
 			<div class="tabbable">
 				<?php 
-				if(isset($_Joueur_))
+				if(isset($_Joueur_) AND  isset($_GET['player']) AND $_Joueur_['pseudo'] == $_GET['player'] )
 				{
 					if(!empty($donneesVotesTemp))
 					{
 						echo '<div class="alert alert-success"><center><ul style="list-style-position: inside; padding-left: 0px;">';
+						$p=0;
+						$list = array();
+						$listNum = array();
 						foreach($donneesVotesTemp as $data)
 						{
-							echo '<li>';
-							$action = explode(':', $data['action'], 2);
-							if($action[0] == "give")
-							{
-								echo "Give de ";
-								$action = explode(':', $action[1]);
-								echo $action[3]. "x ".$action[1];
-								if($data['methode'] == 2)
-									echo ' sur le serveur '.$lecture['Json'][$data['serveur']]['nom'];
+							$flag = false;
+							$temp = '<li>';
+								$action = explode(':', $data['action'], 2);
+								if($action[0] == "give")
+								{
+									$temp .="Give de ";
+									$action = explode(':', $action[1]);
+									$temp .=$action[3]. "x ".$action[1];
+									if($data['methode'] == 2)
+										$temp .=' sur le serveur '.$lecture['Json'][$data['serveur']]['nom'];
+									else
+										$temp .=' sur tout les serveurs de jeu';
+								}
+								elseif($action[0] == "jeton")
+								{
+									$temp .="Give de ".$action[1]." jetons sur le site";
+								}
 								else
-									echo ' sur tout les serveurs de jeu';
+								{
+									$temp .="Vous récupérerez une surprise :D :P";
+								}
+
+							for($a=0;$a<count($list); $a++) {
+								if($list[$a] == $temp) {
+									$listNum[$a]++;
+									$flag=true;
+								}
 							}
-							elseif($action[0] == "jeton")
-							{
-								echo "Give de ".$action[1]." jetons sur le site";
+							if(!$flag) {
+								$list[$p] = $temp;
+								$listNum[$p]=1;
+								$p++;
 							}
-							else
-							{
-								echo "Vous récupérerez une surprise :D :P";
-							}
-							echo "</li>";
 						}
-						echo '</ul>';
-						echo "<a class='neo-button neo-hover-green neo-green hvr-bounce-in' href='?action=recupVotesTemp' title='Récupérer mes récompenses'>Récupérer mes récompenses (Connectez-vous sur le serveur)</a></center></div>";
-					}	
+						
+						for($y=0; $y<$p;$y++) {
+							if($listNum[$y] > 1) {
+								echo $list[$y]." X".$listNum[$y]."</li>";
+							} else {
+								echo $list[$y]."</li>";
+							}
+						}
+						
+						echo "<a class='neo-button neo-green neo-hover-green hvr-bounce-in' href='?action=recupVotesTemp' title='Récupérer mes récompenses'>Récupérer mes récompenses (Connectez-vous sur le serveur)</a></center></div>";
+					}
+
 				}
 				?>
 				<div class="neo-xbackground neo-radius" style="padding:10px;">
@@ -105,7 +129,19 @@
 								</div>
 							<?php } else
 							{
+							
 								$pseudo = htmlspecialchars($_GET['player']);
+								
+								$enligne = false;
+								foreach($serveurStats[$i]['joueurs'] as $key => $value)
+								{
+									$serveurStats[$i]['joueurs'][$key] = strtolower($value);
+									if(isset($pseudo) AND isset($serveurStats[$i]['joueurs']) AND $serveurStats[$i]['joueurs'] AND in_array(strtolower($pseudo), $serveurStats[$i]['joueurs']))
+									{
+										$enligne = true;
+									}
+								}
+	
 								$req_vote->execute(array('serveur' => $i));
 								$count_req->execute(array('serveur' => $i));
 								$data_count = $count_req->fetch();
@@ -127,12 +163,18 @@
 										}
 										else if($action[0] != "jeton" || isset($_Joueur_))
 										{
-											echo '<a href="'.$liensVotes['lien'].'" style="margin-top:5px;" id="btn-lien-'.$id.'" target="_blank" onclick="document.getElementById(\'btn-lien-'.$id.'\').style.display=\'none\';document.getElementById(\'btn-verif-'.$id.'\').style.display=\'inline\';bouclevote('.$id.',\''.$pseudo.'\');" class="neo-button neo-hover-green neo-green hvr-bounce-in" >'.$liensVotes['titre'].'</a>
-												  <button id="btn-verif-'.$id.'" style="margin-top:5px; display:none;" type="button" class="neo-button neo-red" disabled>Vérification en cours ...</button>
-												  <button type="button" style="margin-top:5px; display:none;" id="btn-after-'.$id.'" class="neo-button neo-gray" disabled>'.TempsTotal($lectureVotes['temps']).'</button>
-												';
+											if($lectureVotes['enligne'] == 1 && !$enligne) 
+											{
+												echo '<button type="button" class="neo-button neo-red" style="margin-top:5px; margin-right:5px;" disabled>Vous devez être connecté sur le serveur pour pouvoir voter sur ce site.</button>';
+										
+											} else {
+												echo '<a href="'.$liensVotes['lien'].'" style="margin-top:5px;" id="btn-lien-'.$id.'" target="_blank" onclick="document.getElementById(\'btn-lien-'.$id.'\').style.display=\'none\';document.getElementById(\'btn-verif-'.$id.'\').style.display=\'inline\';bouclevote('.$id.',\''.$pseudo.'\');" class="neo-button neo-green hvr-bounce-in neo-hover-green" >'.$liensVotes['titre'].'</a>
+													  <button id="btn-verif-'.$id.'" style="margin-top:5px; display:none;" type="button" class="neo-button neo-red" disabled>Vérification en cours ...</button>
+													  <button type="button" style="margin-top:5px; display:none;" id="btn-after-'.$id.'" class="neo-button neo-gray" disabled>'.TempsTotal($lectureVotes['temps']).'</button>
+													';
+											}
 										} else {
-											echo '<button type="button" class="neo-button neo-red" style="margin-top:5px; margin-right:5px;" disabled>Vous devez être connecté pour pouvoir voter sur ce site.</button>';
+											echo '<button type="button" class="neo-button neo-red" style="margin-top:5px; margin-right:5px;" disabled>Vous devez être connecté sur le site pour pouvoir voter sur ce site.</button>';
 										
 										}
 									}
@@ -147,7 +189,7 @@
 	</div>
 </div>
 
-<div style="margin-top:75px;" class="neo-background-cale neo-center-simple" >
+<div class="neo-background-cale neo-center-simple" >
 	<div class="neo-center neo-xbackground neo-container neo-responsive neo-radius neo-padding-16">
 		<h2 class="header-bloc">Top voteurs <i class="fas fa-trophy"></i></h2>
 			<div class="corp-bloc">

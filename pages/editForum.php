@@ -24,7 +24,7 @@ if(isset($_Joueur_) AND isset($_GET['id'], $_GET['objet']))
 				</div>
 			</div>
 		</div>
-		<div class="neo-background-cale" style="margin-top:75px;">
+		<div class="neo-background-cale" >
 		<div class="neo-center neo-xbackground neo-radius" style="padding:15px;">
 		<form action="?action=editForum" method="POST">
 			<div class="container">

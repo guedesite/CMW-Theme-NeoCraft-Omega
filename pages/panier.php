@@ -1,3 +1,4 @@
+<?php if(isset($_Joueur_)){?>
 <div class="neo-background-cale text-center" >
 	<div class="neo-center">
 		<div style="width:auto;" class="neo-xbackground neo-xtransforme-2  ">
@@ -9,7 +10,7 @@
 
 </div>
 
-<div style="margin-top:75px;" class="neo-background-cale neo-center-simple" >
+<div class="neo-background-cale neo-center-simple" >
 		<?php if(isset($_GET['success']) && $_GET['success'] == 'true') { ?>
 	
 			<p>
@@ -98,4 +99,4 @@
 	
 	</div>
 </div>
-	
+<?php }else{ header('Location: ?page=boutique'); }?>

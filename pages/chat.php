@@ -8,7 +8,7 @@
 	</div>
 </div>
 
-<div class="neo-background-cale" style="margin-top:75px;">
+<div class="neo-background-cale" >
 	<div class="neo-center">
 		<?php if(count($jsonCon) >0) {
 				$Chat = new Chat($jsonCon);?>

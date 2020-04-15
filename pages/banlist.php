@@ -10,7 +10,7 @@
 
 </div>
 
-<div class="neo-background-cale" style="margin-top:75px;">
+<div class="neo-background-cale" >
 	<div class="neo-center">
 		<div class="tabbable">
 				<?php if(count($jsonCon) > 0) {
@@ -64,5 +64,4 @@
 			</div>
 		</div>
 	</div>
-</div>
 

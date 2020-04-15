@@ -1,7 +1,7 @@
 
 <input type="text" class="hidden neo-hide" value="<?php echo $_Serveur_['General']['ipTexte']; ?>" id="neo-copy-ip">
 
-<div class="neo-background-cale" style="margin-top:30px;">
+<div class="neo-background-cale" >
 	<div class="neo-row-padding neo-hide-large">	
 		<div class="neo-quarter">	
 			<div class="neo-row-padding">	
@@ -25,7 +25,7 @@
 			<div class="neo-hover-opacity hvr-float-shadow "  style="width:100%">
 				<div class="neo-xbackground neo-xtransforme-2 <?php if($_Theme_['general']['-titre'] != 'true') { echo 'neo-margin-top-2'; } else { echo 'neo-margin-top-10'; }?>" >
 					<div class="neo-xbackground neo-xtransforme-1 " style="padding:1px;">
-						<p class="neo-xtransforme-2 text-center" style="margin-top:10px;text-transform: uppercase;" ><b><?php if($_Theme_['mod']['-mod'] != 'true') { echo '<a onclick="CopyIp()" class="neo-text-header-small" href="javascript:void(0)">'.$_Serveur_['General']['ipTexte'].'</a>'; } else { ?><a href="javascript:void(0)"  class="neo-text-header-small" onclick="document.getElementById('mod').style.display='block'">Télécharger le launcher</a><?php } ?></b></p>
+						<p class="neo-xtransforme-2 text-center" style="margin-top:10px;text-transform: uppercase;" ><b><?php if($_Theme_['mod']['-mod'] != 'true') { echo '<a onclick="CopyIp()" class="neo-text-header-small" href="javascript:void(0)">'.( !empty($_Serveur_['General']['ipTexte']) ? $_Serveur_['General']['ipTexte'] : 'Adresse inexistante !').'</a>'; } else { ?><a href="javascript:void(0)"  class="neo-text-header-small" onclick="document.getElementById('mod').style.display='block'">Télécharger le launcher</a><?php } ?></b></p>
 					</div>
 				</div>
 			</div>
@@ -94,7 +94,7 @@
 
 
 
-<div class="neo-background-cale" style="margin-top:50px;">
+<div class="neo-background-cale" >
 
 	
 <div  id="neo-s-index">

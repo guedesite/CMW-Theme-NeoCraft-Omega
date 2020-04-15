@@ -10,7 +10,7 @@
 		</div>
 	</div>
 
-<div class="neo-background-cale" style="margin-top:75px;">
+<div class="neo-background-cale" >
 	<div class="neo-center">
 		<div class="tabbable">
 			<?php if(isset($_Joueur_) AND $_GET['profil'] == $_Joueur_['pseudo']) { ?>	
@@ -193,7 +193,7 @@
 	</div>
 </div>
 
-<div class="neo-background-cale" style="margin-top:75px;">
+<div class="neo-background-cale" >
 	<div class="neo-center">
 		<div class="row neo-radius neo-xbackground" >
 			<div class="col-12 col-ms-6 col-lg-6" >
@@ -250,7 +250,7 @@
 				<h3 class="header-bloc"><?php echo htmlspecialchars($getprofil); ?></h3>
 				<?php $Img = new ImgProfil($joueurDonnees['id']); ?>
 				<img src="<?=$Img->getImgToSize(128, $width, $height);?>" style="width: <?=$width;?>px; height: <?=$height;?>px;" alt="<?=htmlspecialchars($getprofil);?>" />
-
+				<img src="<?=$Img->getImgBodyToSize(128, $width, $height);?>" style="width: auto; height: 400px;padding-left: 30%;" alt="" />
 			</div>
 		</div>
 	</div>
