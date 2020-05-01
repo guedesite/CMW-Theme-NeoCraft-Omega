@@ -63,7 +63,7 @@
 			soyez mature, et laisser ces mentions, merci.
 			
 			-->
-			<div  style="display:block;margin-top:20px;" class="neo-text">Thème <a class="neo-text" href="http://www.neocraft.fr/">NeoCraft Omega 2.0.2 </a> adapté par guedesite</div>
+			<div  style="display:block;margin-top:20px;" class="neo-text">Thème <a class="neo-text" href="http://www.neocraft.fr/">NeoCraft Omega 2.0.3 </a> adapté par guedesite</div>
 			<div  style="display:block;margin-top:10px;margin-bottom:10px;" class="neo-text">Tous droits réservés, site créé pour le serveur <?php echo $_Serveur_['General']['name']; ?></div>
 			<div  style="display:block;margin-top:10px;margin-bottom:10px;" class="neo-text"><a class="neo-text" href="http://craftmywebsite.fr">CraftMyWebsite.fr</a>#<?php echo $versioncms; ?> </div>
 
